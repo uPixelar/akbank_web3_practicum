@@ -1,0 +1,1 @@
+![Example output of program](output.jpg)
