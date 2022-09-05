@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, datetime
 
 def getDayKey():#bugünün tarihini "yyyy-aa-gg" formatında dönen fonksiyon
     return str(date.today())
@@ -51,6 +51,7 @@ class Transaction:#Araç geçiş bilgilerinin daha iyi kaydedilebilmesini sağla
         self.account = account
         self.price = price
         self.succeed = succeed
+        self.datetime = datetime.now()
 
 class TollBooth:#Gişe classı
     def __init__(self, management:Management):
