@@ -13,10 +13,7 @@ fsm = TollBooth(management)#Fatih Sultan Mehmet köprüsü
 for i in range(50):#Gişelerden geçen rasgele 50 araç
     vehicle = choice([AutoHGSAccount, MinibusHGSAccount, BusHGSAccount])()#rastgele bir araç
     vehicle.addBalance(randint(8, 50))#8 ile 50 tl arasında rastgele bir bakiye
-    if randint(0,1) == 0:#rasgele gişeden geçen araç
-        onbestemmuz.transaction(vehicle)#
-    else:
-        fsm.transaction(vehicle)
+    choice([onbestemmuz, fsm]).transaction(vehicle)#rasgele gişeden geçen araç
 
 management.dailyReport(date.today())#yönetim raporu(tüm gişeler)
 
